@@ -1,0 +1,55 @@
+{# app/templates/registration_form.html #}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f5f5f5; }
+        .container { max-width: 640px; margin: 0 auto; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .header { background: linear-gradient(135deg, #0f7a5a 0%, #0a4d3a 100%); color: white; padding: 36px 30px; text-align: center; }
+        .header h1 { font-size: 24px; margin-bottom: 6px; }
+        .content { padding: 36px 30px; }
+        .content p { margin-bottom: 14px; font-size: 15px; }
+        .notice { background-color: #fff8e6; border-left: 4px solid #e0a800; padding: 14px 16px; margin: 18px 0; border-radius: 3px; font-size: 14px; }
+        .footer { background-color: #f9f9f9; padding: 18px 30px; text-align: center; font-size: 12px; color: #666; border-top: 1px solid #eee; }
+        .footer p { margin: 4px 0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Registration Form</h1>
+            <p>{{ company_name }}</p>
+        </div>
+
+        <div class="content">
+            <p>Hi <strong>{{ candidate_name }}</strong>,</p>
+
+            <p>Congratulations once again on being selected at {{ company_name }}.</p>
+
+            <p>We have attached the <strong>registration form (PDF)</strong> with this
+            email. Kindly fill out the form by hand and share a clearly scanned copy
+            with us by replying to this email.</p>
+
+            <div class="notice">
+                <strong>Please note:</strong> In the reference section, you must write
+                <strong>LinkedIn</strong>. Ensure all fields are complete and the scan
+                is clear and legible.
+            </div>
+
+            <p>Please feel free to reach out if you face any issues while filling out
+            the form.</p>
+
+            <p>Best regards,<br><strong>{{ company_name }} - HR Team</strong></p>
+        </div>
+
+        <div class="footer">
+            <p><strong>{{ company_name }}</strong></p>
+            <p>This email is confidential. If you're not the intended recipient, please disregard.</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+@"
+# Secrets - NEVER commit these
+.env
+*.env
+client_secret*.json
+*client_secret*
+
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+.Python
+env/
+
+# OS / IDE
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Test artifacts
+.pytest_cache/
+requirements_check.txt
+"@ | Out-File -FilePath .gitignore -Encoding utf8

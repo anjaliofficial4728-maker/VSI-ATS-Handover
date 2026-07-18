@@ -1,0 +1,82 @@
+{# app/templates/interview_confirmation.html #}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview Confirmation</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f5f5f5; }
+        .container { max-width: 600px; margin: 0 auto; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 40px 30px; text-align: center; }
+        .header h1 { font-size: 28px; margin-bottom: 10px; }
+        .content { padding: 40px 30px; }
+        .content p { margin-bottom: 15px; font-size: 16px; }
+        .button { display: inline-block; padding: 14px 40px; background-color: #667eea; color: white; text-decoration: none; border-radius: 5px; margin: 25px 0; font-weight: 600; font-size: 16px; }
+        .button:hover { background-color: #764ba2; }
+        .info-box { background-color: #f0f4ff; border-left: 4px solid #667eea; padding: 15px; margin: 20px 0; border-radius: 3px; }
+        .detail-item { margin: 10px 0; padding: 8px 0; border-bottom: 1px solid #eee; }
+        .detail-label { font-weight: 600; color: #667eea; }
+        .tips-section { background-color: #fffbf0; border-left: 4px solid #ff9800; padding: 15px; margin: 20px 0; border-radius: 3px; }
+        .tips-section h3 { color: #ff9800; margin-bottom: 10px; }
+        .footer { background-color: #f9f9f9; padding: 20px 30px; text-align: center; font-size: 12px; color: #666; border-top: 1px solid #eee; }
+        .footer p { margin: 5px 0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>✅ Interview Confirmed!</h1>
+            <p>See you soon at {{ company_name }}</p>
+        </div>
+        
+        <div class="content">
+            <p>Dear <strong>{{ candidate_name }}</strong>,</p>
+            
+            <p>Thank you for confirming your attendance. We're excited to meet you!</p>
+            
+            <div class="info-box">
+                <div class="detail-item">
+                    <span class="detail-label">📅 Interview Date:</span> {{ interview_date }}
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">🕐 Interview Time:</span> {{ interview_time }}
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">🔗 Meeting Link:</span> 
+                    <a href="{{ meeting_link }}" target="_blank">{{ meeting_link }}</a>
+                </div>
+            </div>
+            
+            <div class="tips-section">
+                <h3>📋 Interview Tips:</h3>
+                <ul style="margin-left: 20px;">
+                    <li>Please join 5 minutes early to test your audio and video</li>
+                    <li>Ensure you have a stable internet connection</li>
+                    <li>Choose a quiet environment for the interview</li>
+                    <li>Keep your resume handy for reference</li>
+                </ul>
+            </div>
+            
+            <p><strong>What to Expect:</strong></p>
+            <p>During the interview, our team will discuss your background, skills, and fit with our organization. This is also your opportunity to ask questions about the role and company.</p>
+            
+            <p style="text-align: center;">
+                <a href="{{ meeting_link }}" class="button">Join Interview</a>
+            </p>
+            
+            <p>If you have any technical issues or need to reschedule, please contact us as soon as possible.</p>
+            
+            <p>We look forward to our conversation!</p>
+            
+            <p>Best Regards,<br><strong>{{ company_name }} - HR Team</strong></p>
+        </div>
+        
+        <div class="footer">
+            <p><strong>{{ company_name }}</strong></p>
+            <p>This email is confidential. If you're not the intended recipient, please disregard.</p>
+        </div>
+    </div>
+</body>
+</html>

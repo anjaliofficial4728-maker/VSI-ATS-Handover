@@ -1,0 +1,64 @@
+{# app/templates/reminder_email.html #}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reminder: Your Response is Pending</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f5f5f5; }
+        .container { max-width: 600px; margin: 0 auto; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .header { background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%); color: white; padding: 40px 30px; text-align: center; }
+        .header h1 { font-size: 28px; margin-bottom: 10px; }
+        .content { padding: 40px 30px; }
+        .content p { margin-bottom: 15px; font-size: 16px; }
+        .button { display: inline-block; padding: 14px 40px; background-color: #ff9800; color: white; text-decoration: none; border-radius: 5px; margin: 25px 0; font-weight: 600; font-size: 16px; }
+        .button:hover { background-color: #f57c00; }
+        .reminder-box { background-color: #fff3e0; border-left: 4px solid #ff9800; padding: 15px; margin: 20px 0; border-radius: 3px; }
+        .footer { background-color: #f9f9f9; padding: 20px 30px; text-align: center; font-size: 12px; color: #666; border-top: 1px solid #eee; }
+        .footer p { margin: 5px 0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📬 Friendly Reminder</h1>
+            <p>We're Still Waiting for Your Response</p>
+        </div>
+        
+        <div class="content">
+            <p>Dear <strong>{{ candidate_name }}</strong>,</p>
+            
+            <div class="reminder-box">
+                <p style="margin-bottom: 0;"><strong>This is a friendly reminder</strong> that we sent you an important message regarding your application/offer from {{ company_name }}.</p>
+            </div>
+            
+            <p>We haven't received your response yet. We're excited about the possibility of you joining our team and would love to hear from you.</p>
+            
+            <p><strong>What we're waiting for:</strong></p>
+            <ul style="margin-left: 20px;">
+                <li>Your confirmation or response to our previous message</li>
+                <li>Completion of the required forms or registrations</li>
+                <li>Any questions or clarifications you might have</li>
+            </ul>
+            
+            <p>Please take a moment to respond at your earliest convenience. If you have any questions or concerns, we're here to help!</p>
+            
+            <p style="text-align: center;">
+                <a href="mailto:{{ sender_email }}?subject=Response - {{ candidate_name }}" class="button">Reply Now</a>
+            </p>
+            
+            <p><strong>{{ company_name }} HR Team</strong><br>
+            {{ sender_email }}</p>
+            
+            <p style="font-size: 14px; color: #999;">If you're no longer interested, please let us know so we can update our records accordingly.</p>
+        </div>
+        
+        <div class="footer">
+            <p><strong>{{ company_name }}</strong></p>
+            <p>This email is confidential. If you're not the intended recipient, please disregard.</p>
+        </div>
+    </div>
+</body>
+</html>

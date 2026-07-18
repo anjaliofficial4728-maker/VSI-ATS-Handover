@@ -1,0 +1,60 @@
+{# app/templates/application_form.html #}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Your Application</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f5f5f5; }
+        .container { max-width: 600px; margin: 0 auto; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 40px 30px; text-align: center; }
+        .header h1 { font-size: 28px; margin-bottom: 10px; }
+        .content { padding: 40px 30px; }
+        .content p { margin-bottom: 15px; font-size: 16px; }
+        .button { display: inline-block; padding: 14px 40px; background-color: #667eea; color: white; text-decoration: none; border-radius: 5px; margin: 25px 0; font-weight: 600; font-size: 16px; }
+        .button:hover { background-color: #764ba2; }
+        .highlight { background-color: #f0f4ff; border-left: 4px solid #667eea; padding: 15px; margin: 20px 0; border-radius: 3px; }
+        .footer { background-color: #f9f9f9; padding: 20px 30px; text-align: center; font-size: 12px; color: #666; border-top: 1px solid #eee; }
+        .footer p { margin: 5px 0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Welcome, {{ candidate_name }}!</h1>
+            <p>Let's Get Started</p>
+        </div>
+        
+        <div class="content">
+            <p>Dear <strong>{{ candidate_name }}</strong>,</p>
+            
+            <p>Thank you for your interest in {{ company_name }}. We're excited about the possibility of having you join our team!</p>
+            
+            <p>As the next step, we'd like you to complete our application form. This will help us better understand your background and qualifications.</p>
+            
+            <div class="highlight">
+                <strong>⏱️ Time Required:</strong> Approximately 10-15 minutes
+                <br>
+                <strong>📋 What to Prepare:</strong> Your resume and relevant certifications
+            </div>
+            
+            <p style="text-align: center;">
+                <a href="{{ form_url }}" class="button">Complete Application Form</a>
+            </p>
+            
+            <p>If you have any questions while filling out the form, please don't hesitate to reach out to us.</p>
+            
+            <p>Looking forward to learning more about you!</p>
+            
+            <p>Best Regards,<br><strong>{{ company_name }} - HR Team</strong></p>
+        </div>
+        
+        <div class="footer">
+            <p><strong>{{ company_name }}</strong></p>
+            <p>This email is confidential. If you're not the intended recipient, please disregard.</p>
+        </div>
+    </div>
+</body>
+</html>

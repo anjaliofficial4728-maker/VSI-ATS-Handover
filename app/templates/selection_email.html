@@ -1,0 +1,90 @@
+{# app/templates/selection_email.html #}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You've Been Selected</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f5f5f5; }
+        .container { max-width: 640px; margin: 0 auto; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .header { background: linear-gradient(135deg, #0f7a5a 0%, #0a4d3a 100%); color: white; padding: 36px 30px; text-align: center; }
+        .header h1 { font-size: 26px; margin-bottom: 6px; }
+        .content { padding: 36px 30px; }
+        .content p { margin-bottom: 14px; font-size: 15px; }
+        .details { background-color: #f0f7f4; border-left: 4px solid #0f7a5a; padding: 16px 18px; margin: 18px 0; border-radius: 3px; }
+        .details h3 { color: #0f7a5a; margin-bottom: 8px; font-size: 16px; }
+        .details ul { margin-left: 18px; }
+        .details li { margin: 5px 0; }
+        .footer { background-color: #f9f9f9; padding: 18px 30px; text-align: center; font-size: 12px; color: #666; border-top: 1px solid #eee; }
+        .footer p { margin: 4px 0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Congratulations!</h1>
+            <p>You've been selected at {{ company_name }}</p>
+        </div>
+
+        <div class="content">
+            <p>Hi <strong>{{ candidate_name }}</strong>,</p>
+
+            <p>We are pleased to inform you that you have been selected for the
+            <strong>{{ role }}</strong> at {{ company_name }} (VSI).</p>
+
+            <p>Your responses reflected the intent and clarity we look for in an
+            ownership-driven environment, and we believe you can contribute
+            meaningfully to our ongoing systems and automation initiatives.</p>
+
+            <div class="details">
+                <h3>Internship Details</h3>
+                <ul>
+                    <li><strong>Start Date:</strong> 01 June 2026</li>
+                    <li><strong>Duration:</strong> Initial 3 months (extendable to 6 months based on performance, with paid opportunity)</li>
+                    <li><strong>Type:</strong> Unpaid</li>
+                    <li><strong>Mode:</strong> Remote</li>
+                    <li><strong>Working Hours:</strong> 10 AM to 5 PM (1 hour break)</li>
+                </ul>
+            </div>
+
+            <div class="details">
+                <h3>Role Focus</h3>
+                <ul>
+                    <li>End-to-end recruitment coordination (screening, scheduling, evaluation tracking)</li>
+                    <li>Building and improving hiring and onboarding systems</li>
+                    <li>Maintaining candidate databases and interview pipelines</li>
+                    <li>Supporting HR operations and documentation processes</li>
+                    <li>Driving process efficiency in hiring and people management workflows</li>
+                </ul>
+            </div>
+
+            <p>This is an execution-focused role, not a training-based internship.
+            You will be expected to take ownership of tasks, work independently, and
+            deliver outcomes without step-by-step guidance.</p>
+
+            <div class="details">
+                <h3>Performance &amp; Growth</h3>
+                <ul>
+                    <li>Certificate provided upon successful completion</li>
+                    <li>Letter of Recommendation (for exceptional performance)</li>
+                    <li>Opportunity for extended duration and paid/full-time role based on performance</li>
+                </ul>
+            </div>
+
+            <p>Please confirm your acceptance by replying to this email. Once
+            confirmed, we will share the registration and onboarding details.</p>
+
+            <p>We look forward to your contribution.</p>
+
+            <p>Best regards,<br><strong>{{ company_name }} - HR Team</strong></p>
+        </div>
+
+        <div class="footer">
+            <p><strong>{{ company_name }}</strong></p>
+            <p>This email is confidential. If you're not the intended recipient, please disregard.</p>
+        </div>
+    </div>
+</body>
+</html>
