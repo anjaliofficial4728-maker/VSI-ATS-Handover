@@ -292,7 +292,7 @@ else:
 # Public base URL of the BACKEND, used to build the booking link
 # placed in the interview email. Locally this is localhost:8000;
 # in production set BACKEND_PUBLIC_URL to your Railway URL.
-BACKEND_PUBLIC_URL = os.getenv("BACKEND_PUBLIC_URL", "http://localhost:8000")
+BACKEND_PUBLIC_URL = os.getenv("BACKEND_PUBLIC_URL", "https://vsi-ats-handover.onrender.com")
 
 # New status set when a candidate confirms their interview slot.
 STATUS_INTERVIEW_CONFIRMED = "interview_confirmed"
