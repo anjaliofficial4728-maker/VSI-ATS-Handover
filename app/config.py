@@ -216,20 +216,18 @@ OAUTH_SUCCESS_REDIRECT = os.getenv(
 
 
 # ---- Application form question-ID -> meaning mapping ----
-# These IDs come from YOUR form's schema (/form-schema output).
-# The backend uses these to find each answer regardless of order.
-# If you ever rebuild the form, re-run /form-schema and update these.
-FORM_FIELD_EMAIL = "12f1149e"          # "Email"
-FORM_FIELD_NAME = "4cc467dd"           # "Name (first name and last name)"
-FORM_FIELD_START_DATE = "5d988172"     # "When can you start?"
+# IDs from the NEW form (Internship application form), via /form-schema.
+FORM_FIELD_EMAIL = "61c73e81"          # "Email"
+FORM_FIELD_NAME = "6a2f8ab5"           # "Name"
+FORM_FIELD_START_DATE = "20c8a719"     # "When can you start?"
 
 # The five eligibility questions that must all be "Yes" for a
 # submission to count as valid.
-FORM_FIELD_TIMINGS_OK = "023b9695"     # OK with 10-5 timings?
-FORM_FIELD_UNPAID_OK = "42d9f174"      # OK with 3-month unpaid structure?
-FORM_FIELD_CONTINUATION_OK = "2ad48946"  # OK with performance-based continuation?
-FORM_FIELD_HAS_LAPTOP = "410044af"     # Have your own laptop?
-FORM_FIELD_HAS_INTERNET = "5dd07b0f"   # Stable internet?
+FORM_FIELD_TIMINGS_OK = "033f6ddd"       # 10 AM-5 PM timings?
+FORM_FIELD_UNPAID_OK = "79a53575"        # 3-month unpaid structure?
+FORM_FIELD_CONTINUATION_OK = "7779e121"  # performance-based continuation?
+FORM_FIELD_HAS_LAPTOP = "12e6c36a"       # own laptop?
+FORM_FIELD_HAS_INTERNET = "09fdfdff"     # stable internet?
 
 # All the "must be Yes" eligibility fields, checked together.
 FORM_ELIGIBILITY_FIELDS = [
@@ -240,22 +238,22 @@ FORM_ELIGIBILITY_FIELDS = [
     FORM_FIELD_HAS_INTERNET,
 ]
 
-# Full ID -> human title map, kept for logging / storing readable
-# answers in the unmatched table.
+# Full ID -> human title map, for logging / readable answers.
 FORM_FIELD_TITLES = {
-    "4cc467dd": "Name",
-    "12f1149e": "Email",
-    "40cf1099": "Current City",
-    "1ce8e608": "Year of graduation",
-    "416c0211": "Preferred Internship Duration",
-    "7bb9b125": "Position(s) interested in",
-    "023b9695": "OK with 10-5 timings",
-    "42d9f174": "OK with 3-month unpaid structure",
-    "2ad48946": "OK with performance-based continuation",
-    "4f929534": "Why join this internship",
-    "410044af": "Has own laptop",
-    "5dd07b0f": "Stable internet",
-    "5d988172": "When can you start",
+    "6a2f8ab5": "Name",
+    "61c73e81": "Email",
+    "11c2cd54": "Phone number",
+    "15cce698": "Current City",
+    "4bcca2a0": "Year of graduation",
+    "32ccbbdd": "Preferred Internship Duration",
+    "40410bc5": "Position(s) interested in",
+    "033f6ddd": "OK with 10-5 timings",
+    "79a53575": "OK with 3-month unpaid structure",
+    "7779e121": "OK with performance-based continuation",
+    "479d70c1": "Why join this internship",
+    "12e6c36a": "Has own laptop",
+    "09fdfdff": "Stable internet",
+    "20c8a719": "When can you start",
 }
 
 
@@ -311,7 +309,7 @@ STATUS_INTERVIEW_CONFIRMED = "interview_confirmed"
 # the APPLICATION_FORM_URL env var if the form link ever changes.
 APPLICATION_FORM_URL = os.getenv(
     "APPLICATION_FORM_URL",
-    "https://forms.gle/v47TC65JqzgpsBzL7",
+    "https://forms.gle/b8q8k5xa7JoY2Sup8",
 )
 # ============================================================
 # Phase 3 - Step 4: Calendar configuration
