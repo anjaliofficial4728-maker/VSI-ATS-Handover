@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Full-Time Job Application</title>
+</head>
+<body style="margin:0; padding:0; background-color:#f4f6f8; font-family:Arial, Helvetica, sans-serif; color:#243042;">
+  <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="background-color:#f4f6f8; padding:24px 0;">
+    <tr><td align="center">
+      <table role="presentation" cellpadding="0" cellspacing="0" width="600" style="width:100%; max-width:600px; background-color:#ffffff; border-radius:10px; overflow:hidden;">
+        <tr><td style="background-color:#174ea6; padding:26px 32px; color:#ffffff;">
+          <h1 style="margin:0; font-size:22px; line-height:1.35;">Full-Time Job Application</h1>
+          <p style="margin:8px 0 0; font-size:14px;">{{ company_name | e }}</p>
+        </td></tr>
+        <tr><td style="padding:32px;">
+          <p style="margin:0 0 18px; font-size:16px;">Hi {{ candidate_name | e }},</p>
+          <p style="margin:0 0 16px; font-size:15px; line-height:1.65;">
+            Thank you for your interest in a full-time opportunity with {{ company_name | e }}.
+            Please complete the job application form using the button below. It should take approximately
+            10–15 minutes to complete.
+          </p>
+          <p style="margin:0 0 22px; font-size:15px; line-height:1.65;">
+            Before you begin, please keep your resume and relevant work-experience details handy.
+          </p>
+          <table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 auto 24px;">
+            <tr><td align="center" style="border-radius:6px; background-color:#1765d1;">
+              <a href="{{ form_url | e }}" target="_blank" style="display:inline-block; padding:14px 26px; color:#ffffff; text-decoration:none; font-size:15px; font-weight:bold;">Complete Job Application</a>
+            </td></tr>
+          </table>
+          <p style="margin:0 0 16px; font-size:15px; line-height:1.65;">
+            After you submit the form, our HR team will review your responses and contact you if you are
+            shortlisted for the next stage.
+          </p>
+          <p style="margin:0; font-size:15px; line-height:1.65;">
+            If you have any questions, please contact
+            <a href="mailto:info@virtualsolutionsindia.com" style="color:#1765d1;">info@virtualsolutionsindia.com</a>.
+          </p>
+          <p style="margin:26px 0 0; font-size:15px; line-height:1.65;">
+            Best regards,<br>HR Team<br>{{ company_name | e }}
+          </p>
+        </td></tr>
+        <tr><td style="padding:18px 32px; background-color:#f0f3f7; color:#657184; font-size:12px; line-height:1.5; text-align:center;">
+          This email was sent by {{ company_name | e }} regarding your full-time job application.
+        </td></tr>
+      </table>
+    </td></tr>
+  </table>
+</body>
+</html>

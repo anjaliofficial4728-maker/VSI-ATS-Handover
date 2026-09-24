@@ -2,63 +2,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reminder: Your Response is Pending</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f5f5f5; }
-        .container { max-width: 600px; margin: 0 auto; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-        .header { background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%); color: white; padding: 40px 30px; text-align: center; }
-        .header h1 { font-size: 28px; margin-bottom: 10px; }
-        .content { padding: 40px 30px; }
-        .content p { margin-bottom: 15px; font-size: 16px; }
-        .button { display: inline-block; padding: 14px 40px; background-color: #ff9800; color: white; text-decoration: none; border-radius: 5px; margin: 25px 0; font-weight: 600; font-size: 16px; }
-        .button:hover { background-color: #f57c00; }
-        .reminder-box { background-color: #fff3e0; border-left: 4px solid #ff9800; padding: 15px; margin: 20px 0; border-radius: 3px; }
-        .footer { background-color: #f9f9f9; padding: 20px 30px; text-align: center; font-size: 12px; color: #666; border-top: 1px solid #eee; }
-        .footer p { margin: 5px 0; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Friendly Reminder - {{ company_name }}</title>
 </head>
-<body>
-    <div class="container">
-        <div class="header">
-            <h1>📬 Friendly Reminder</h1>
-            <p>We're Still Waiting for Your Response</p>
-        </div>
-        
-        <div class="content">
-            <p>Dear <strong>{{ candidate_name }}</strong>,</p>
-            
-            <div class="reminder-box">
-                <p style="margin-bottom: 0;"><strong>This is a friendly reminder</strong> that we sent you an important message regarding your application/offer from {{ company_name }}.</p>
-            </div>
-            
-            <p>We haven't received your response yet. We're excited about the possibility of you joining our team and would love to hear from you.</p>
-            
-            <p><strong>What we're waiting for:</strong></p>
-            <ul style="margin-left: 20px;">
-                <li>Your confirmation or response to our previous message</li>
-                <li>Completion of the required forms or registrations</li>
-                <li>Any questions or clarifications you might have</li>
-            </ul>
-            
-            <p>Please take a moment to respond at your earliest convenience. If you have any questions or concerns, we're here to help!</p>
-            
-            <p style="text-align: center;">
-                <a href="mailto:{{ sender_email }}?subject=Response - {{ candidate_name }}" class="button">Reply Now</a>
-            </p>
-            
-            <p><strong>{{ company_name }} HR Team</strong><br>
-            {{ sender_email }}</p>
-            
-            <p style="font-size: 14px; color: #999;">If you're no longer interested, please let us know so we can update our records accordingly.</p>
-        </div>
-        
-        <div class="footer">
-            <p><strong>{{ company_name }}</strong></p>
-            <p>This email is confidential. If you're not the intended recipient, please disregard.</p>
-        </div>
-    </div>
+<body style="margin:0;padding:0;background-color:#f3f5f9;font-family:Arial,Helvetica,sans-serif;color:#243047;">
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#f3f5f9;padding:28px 12px;">
+    <tr><td align="center">
+      <table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" style="width:100%;max-width:600px;background:#ffffff;border:1px solid #e5eaf1;border-radius:12px;overflow:hidden;">
+        <tr><td align="center" style="background:#173b70;padding:30px 24px;color:#ffffff;">
+          <p style="margin:0 0 8px;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:#dbeafe;">{{ company_name | e }}</p>
+          <h1 style="margin:0;font-size:25px;line-height:1.3;font-weight:700;color:#ffffff;">A Friendly Reminder</h1>
+          <p style="margin:10px 0 0;font-size:15px;line-height:1.5;color:#e6efff;">We’re waiting to hear from you</p>
+        </td></tr>
+        <tr><td style="padding:32px 30px 24px;">
+          <p style="margin:0 0 18px;font-size:16px;line-height:1.65;">Dear <strong>{{ candidate_name | e }}</strong>,</p>
+          <p style="margin:0 0 18px;font-size:15px;line-height:1.7;">
+            We’re following up on our previous email regarding your application or offer with
+            <strong>{{ company_name | e }}</strong>. We haven’t received your response yet and would appreciate an update when you have a moment.
+          </p>
+          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:22px 0;background:#f1f6ff;border-left:4px solid #2f68c5;border-radius:6px;">
+            <tr><td style="padding:16px 18px;">
+              <p style="margin:0;font-size:14px;line-height:1.65;color:#24416d;">
+                Please reply to let us know your decision, confirm any required next steps, or ask us if you need clarification.
+              </p>
+            </td></tr>
+          </table>
+          <p style="margin:0 0 22px;font-size:15px;line-height:1.7;">You can respond directly to our HR team using the button below.</p>
+          <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" style="margin:0 auto 26px;">
+            <tr><td align="center" bgcolor="#2463c5" style="border-radius:7px;">
+              <a href="mailto:info@virtualsolutionsindia.com?subject=Response%20to%20VSI%20Reminder" style="display:inline-block;padding:14px 30px;font-size:15px;font-weight:700;line-height:1.2;color:#ffffff;text-decoration:none;border-radius:7px;">Reply Now</a>
+            </td></tr>
+          </table>
+          <p style="margin:0 0 16px;font-size:14px;line-height:1.7;color:#4b5870;">If you have already responded, please ignore this message.</p>
+          <p style="margin:0;font-size:15px;line-height:1.7;">
+            Best regards,<br><strong>{{ company_name | e }} HR Team</strong><br>
+            <a href="mailto:info@virtualsolutionsindia.com" style="color:#2463c5;text-decoration:underline;">info@virtualsolutionsindia.com</a>
+          </p>
+        </td></tr>
+        <tr><td style="padding:18px 24px;background:#f8fafc;border-top:1px solid #e7edf5;text-align:center;">
+          <p style="margin:0 0 6px;font-size:12px;line-height:1.5;color:#64748b;"><strong style="color:#475569;">{{ company_name | e }}</strong></p>
+          <p style="margin:0;font-size:11px;line-height:1.6;color:#8792a5;">This email is intended for the addressed recipient. If you received it by mistake, please disregard it.</p>
+        </td></tr>
+      </table>
+    </td></tr>
+  </table>
 </body>
 </html>

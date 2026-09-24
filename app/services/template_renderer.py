@@ -54,6 +54,9 @@ class TemplateRenderer:
             # Read template file
             with open(template_path, "r", encoding="utf-8") as f:
                 template_content = f.read()
+            print("TEMPLATE PATH:", template_path.resolve())
+            print("TEMPLATE CONTAINS OLD ROLE FOCUS:", "Role Focus" in template_content)
+            print("TEMPLATE CONTAINS NEW TASKS:", "Internship Tasks / Responsibilities" in template_content)
             
             # Parse and render template
             template = Template(template_content)
